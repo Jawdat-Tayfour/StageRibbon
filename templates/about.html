@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+<title>Us...</title>
+<link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}">
+{% endblock title %}
+{% block content %}
+
+<div class="content-container">
+
+    <p class="top">
+
+        Original members:</br>
+        <strong>Jay, Henry, Lotus, Olaf, Dye Guy, Kreed, Pace</strong>
+    </p>
+    </br>
+    <p class="top">
+        Current members:</br>
+        <strong>Jay, Henry, Lotus, Olaf, Dye Guy, PuxJak, Skulltag, Freyr, Stepa</strong>
+    </p>
+    
+    <button>
+    <strong><a href="{% url 'contact' %}">Join StageRibbon</a></strong>
+    </button>
+    
+    <p class="bottom">StageRibbon is a free digital cityscape to unleash your ambitions.</br>
+        <strong>-  Jay</strong>
+    </p>
+</div>
+
+{% endblock content %}

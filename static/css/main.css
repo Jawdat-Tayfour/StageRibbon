@@ -1,0 +1,141 @@
+
+body{
+    height: 100vh;
+}
+.latest_post {
+    aspect-ratio: 16 / 9;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    min-height: 80%;
+    width: 80%;
+    top:20vh;
+    margin-left: 10%;
+    position: absolute;
+    background-color: rgba(210, 210, 210, 0.7);
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(10, 179, 179);
+    overflow: auto;
+    transition: all 1s ease;
+}
+.latest_post:hover{
+    border-color: black;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.latest_post .title{
+    display: flex;
+    flex: 1;
+    font-size: 2rem;
+    height: 15%;
+    width: 50%;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.latest_post .video{
+    display: flex;
+    aspect-ratio:16 / 9;
+    flex: 2;
+    width: 50%;
+    height: 30%;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+}
+.latest_post .video iframe{
+    border:none;
+    width: 90%;
+    height: 300px ;
+}
+.latest_post .body{
+    display: inline-flex;
+    position: absolute;
+    top: 10%;
+    font-size: auto; 
+    font-weight: 70;
+    width: auto ;
+    height: 80%;
+    margin-left: calc(50% + 1rem);
+    margin-right: 1rem;
+    word-wrap: break-word;
+    margin-bottom: 10%;
+    overflow: hidden;
+}
+.latest_post .body p{
+    padding-right:6% ;
+    word-wrap: break-word;
+}
+.project-flex{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(10rem,1fr));
+    flex-wrap: wrap;
+    background-color: rgba(210, 210, 210, 0.7);
+    position: absolute;
+    align-self: center;
+    width: 80%;
+    margin: 8rem;
+    top:105vh;
+    height: fit-content;
+    border-style: dashed;
+    border-color: rgb(10, 179, 179);
+    border-width: 3px;
+    padding: 1rem 2rem;
+
+
+}
+.project-flex .card{
+    background-color: rgba(210, 210, 210, 0.4);
+    height: 15rem;
+    width: clamp(25%,100%,100%);
+    margin-bottom: 0;
+    padding: 1rem 0;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(10, 179, 179);
+    border-left: none;
+    border-right: none;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+}
+.card:hover{
+    border-color: black;
+    transform: translateY(-5px);
+    background-color: rgba(210, 210, 210, 1);
+}
+.project-flex img{
+    width: clamp(10rem,auto,12rem);
+    height: 10rem;
+    padding: 0 1rem;
+    overflow: hidden;
+}
+.project-flex .title{
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0 1.5rem;
+    transition: all 0.5s ease;
+}
+.project-flex .title:hover{
+    color:rgb(10, 179, 179) ;
+}
+.project-flex .body{
+    flex: 1;
+    font-size: 0.6rem;
+    padding: 0 1.5rem;
+    width: 35%;
+    height: 10%;
+    overflow: hidden;
+}
+
+@media (max-width:800px) {
+    body{
+        height: 25%;
+    }
+    .project-flex{
+        display: none;
+    }
+}

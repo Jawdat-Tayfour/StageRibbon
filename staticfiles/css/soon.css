@@ -1,0 +1,71 @@
+.pgcontainer{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    height: fit-content;
+    position: absolute;
+    align-self: center;
+    top:15vh;
+    background-image: linear-gradient(45deg,rgba(0,179,179,0.5),rgba(0,0,0,0.3),rgba(240,240,240,0.1),transparent);
+    background-size: 400%;
+    animation: grad 50s linear infinite alternate;
+    border-radius: 10px;
+    justify-content: center;
+}
+.pgcontainer h1{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif   ;
+    padding: 1rem;
+    margin: 1rem;
+    text-transform: uppercase;
+    box-shadow: inset;
+    font-size: 2.2rem;
+    align-self: center;
+}
+.pgcontainer .links{
+    display: flex;
+    background-image:linear-gradient(45deg,rgba(0,179,179,0.5),rgba(0,0,0,0.3),rgba(240,240,240,0.1),transparent);
+    animation: grad 10s linear infinite alternate;
+    background-size: 400%;
+    border-radius: 10px;
+    width: fit-content;
+    align-self: center;
+    justify-content: center;
+}
+.pgcontainer ul{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+.pgcontainer li{
+    margin: 2rem;
+}
+.pgcontainer .links ul li a{
+    color: black;
+    text-decoration: none;
+    padding: 1rem 1rem;
+    transition: all 0.6s ease;
+    border: none;
+} 
+.pgcontainer .links ul li a:hover{
+    color: rgba(0,255,255);
+}
+.pgcontainer h1 a {
+    color: black;
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: all 0.2s ease-in;
+}
+.pgcontainer h1 a:hover{
+    color: rgba(0,255,255);
+}
+
+@keyframes grad {
+    0%{
+        background-position: left;
+    }
+    100%{
+        background-position: right;
+    }
+}

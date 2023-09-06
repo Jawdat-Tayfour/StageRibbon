@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    <title>StageRibbon | Games</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/games.css' %}">
+
+{% endblock title %}
+
+{% block content %}
+<div class="gridyy">
+    {% for project in projects %}
+    <a href={{project.get_absolute_url}}>
+        <div class="card">
+            <div class="image">
+                <img src="{{project.cover_url}}">
+            </div>
+            <div class ="title">
+                {{project.title}}
+            </div>
+
+        </div>
+        
+    </a>
+
+    {% endfor %}
+</div>
+{% endblock content %}

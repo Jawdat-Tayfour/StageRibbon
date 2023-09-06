@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+<head>
+    {% block title %}
+    <title>StageRibbon | Main</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    {% endblock title %}
+</head>
+{% block content %}
+
+
+{% for latest_postt in latest_post %}
+<a href={{latest_postt.get_absolute_url}}>  
+<div class="latest_post">
+    
+    <div class="title">
+    {{ latest_postt.title }}
+    </div>
+
+    <div class="video">
+        <iframe src="{{latest_postt.video_url}}"></iframe>
+        </div>
+
+    <div class="body">
+      {{latest_postt.body|safe}}
+        </div>
+    
+</div>
+</a>
+{% endfor %}
+
+
+<div class="project-flex">
+    {% for post in posts %}
+    <a href={{post.get_absolute_url}}>
+        <div class="card">
+            <div class="image">
+                <img src="{{post.cover_url}}">
+            </div>
+            <div class ="title">
+                {{post.title}}
+            </div>
+            <div class="body">
+                {{post.body|safe}}
+            </div>
+        </div>
+        
+    </a>
+    {% endfor %}
+
+</div>
+
+    
+
+{% endblock content %}

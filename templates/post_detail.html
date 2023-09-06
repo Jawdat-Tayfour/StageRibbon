@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+<title>{{post.title |upper}}</title>
+<link rel="stylesheet" type="text/css" href="{% static 'css/post_detail.css' %}">
+{% endblock title %}
+{% block content %}
+<div class="bg" ></div>
+<div class="post_container">
+    <div class="title">
+        <p>{{post.title}}</p>
+    </div>
+
+    <div class="bg-cover">
+        <img></img>
+    </div>
+
+    <div class="video">
+        <iframe src="{{post.video_url}}"allow="allowfullscreen"></iframe>
+    </div>
+
+    <div class="body">
+        <p>{{post.body|safe}}</p>
+    </div>
+    
+    <div class="images">
+        {% for image in post.images.all %}
+            <img class="image-card"src={{image.image}}></img>
+        
+        {% endfor %}
+    </div>
+
+</div>
+
+{% endblock content %}

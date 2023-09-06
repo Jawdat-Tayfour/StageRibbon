@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+<title>StageRibbon | Contact Us</title>
+<link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}">
+{% endblock title %}
+{% block content %}
+<h1 class="Text">Contact</h1>
+    <form method="post" action=".">
+        {% csrf_token %}
+        {{ form }}
+        <button>Submit</button>
+    </form>
+    
+
+{% endblock content %}

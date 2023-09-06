@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	{% block title %}<title>StageRibbon</title>{% endblock title %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	
+</head>
+<body>
+<header><a href="{% url 'announcements' %}">
+	<img class="logo" src="{% static '/images/image.png/' %}" alt="logo"></img></a>
+	<nav>
+		<ul class="nav_links">
+			<li><a href="{% url 'games' %}">Games</a></li>
+		</ul>
+
+	</nav>
+	<a class="cta" href="{% url 'contact' %}"><button>Contact</button></a>
+</header>
+
+{% block content %}
+{% endblock content %}
+
+<footer class="footer">
+	<div class="f-container">
+		<div class="row">
+			<div class="footer-col">
+				
+				<ul>
+					<h4>company</h4>
+					<li><a href="{% url 'about' %}">about us </a></li>
+					<li><a href="{% url 'soon' %}">our services</a></li>
+					<li><a href="{% url 'soon' %}">affiliate program</a></li>
+
+				</ul>
+
+			</div>
+			<div class="footer-col">
+				<ul>
+					<h4>online shop</h4>
+					<li><a href="{% url 'games' %}">games</a></li>
+					<li><a href="{% url 'soon' %}">merch</a></li>
+				</ul>
+
+			</div>
+			<div class="footer-col">
+				<ul class="social-links">
+					<h4>follow us</h4>
+					<li><a href="https://www.facebook.com/profile.php?id=100093918826306"><i class="fab fa-facebook-f"></i></a></li>
+					<li><a href="https://twitter.com/StageRibbon"><i class="fab fa-twitter"></i></a></li>
+					<li><a href="https://www.instagram.com/stageribbon/"><i class="fab fa-instagram"></i></a></li>
+					<li><a href="https://www.linkedin.com/in/stage-ribbon-b66361290/"><i class="fab fa-linkedin-in"></i></a></li>
+					
+				</ul>
+
+			</div>
+		</div>
+	</div>
+	
+	</footer>
+</body>
+</html>

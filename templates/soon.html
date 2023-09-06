@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+<title>Soon...</title>
+<link rel="stylesheet" type="text/css" href="{% static 'css/soon.css' %}">
+{% endblock title %}
+{% block content %}
+<div class="pgcontainer">
+    <h1>This Page Is Coming Soon... stay tuned and follow us on</h1>
+    <div class="links">
+        <ul class="social-links">
+            <li><a href="https://www.facebook.com/profile.php?id=100093918826306"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://twitter.com/StageRibbon"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/stageribbon/"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/stage-ribbon-b66361290/"><i class="fab fa-linkedin-in"></i></a></li>
+            
+        </ul>
+    </div>
+    <h1>Or Contact Us <a href="{% url 'contact' %}">HERE</a> </h1>
+</div>
+{% endblock content %}
