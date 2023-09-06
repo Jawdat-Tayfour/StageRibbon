@@ -4,6 +4,7 @@ Django==4.2.4
 django-ckeditor==6.7.0
 django-js-asset==2.1.0
 environs==9.5.0
+gunicorn==21.2.0
 marshmallow==3.20.1
 packaging==23.1
 Pillow==10.0.0
