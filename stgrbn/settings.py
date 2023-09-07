@@ -24,14 +24,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env("DJANGO_SECRET_KEY",default="84v171crkv2ntnn3xicko=%9wek=ly@45$2jrlv)o(8d733goe")
+SECRET_KEY = env("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool("DJANGO_DEBUG",default=False)
 
-ALLOWED_HOSTS = env.list("ALLOWED_HOSTS",default=["*"])
+ALLOWED_HOSTS = env.list("ALLOWED_HOSTS")
 
-SECURE_SSL_REDIRECT = env.bool("DJANGO_SECURE_SSL_REDIRECT", default=False)
+SECURE_SSL_REDIRECT = env.bool("DJANGO_SECURE_SSL_REDIRECT", default=True)
 SECURE_HSTS_SECONDS = env.int("DJANGO_SECURE_HSTS_SECONDS", default=2592000) #
 #30 days
 SECURE_HSTS_INCLUDE_SUBDOMAINS =env.bool("DJANGO_SECURE_HSTS_INCLUDE_SUBDOMAINS",default=True)
@@ -97,7 +97,7 @@ DATABASES = {
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
-db = env("DJANGO_DATABASE",default="postgres://stageribbon_fpyb_user:czPBPdNJrK3MWXXT8wrRrQZT2b1ml9S1@dpg-cjro49dm702s73dgck4g-a.oregon-postgres.render.com/stageribbon_fpyb")
+db = env("DJANGO_DATABASE")
 DATABASES['default']= dj_database_url.parse(db)
 
 # Password validation
@@ -132,8 +132,8 @@ USE_TZ = True
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = "smtp.gmail.com"
-EMAIL_HOST_USER = env("EMAIL_HOST_USER",default="tajwdat3@gmail.com")
-EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD",default="lhpxgzsbvhbhrusi")
+EMAIL_HOST_USER = env("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD")
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
